@@ -5,6 +5,7 @@
 
 Проект размещён в rustore:
 https://www.rustore.ru/catalog/app/com.yakovskij.stars
+
 ---
 ![](docs/1.webp)
 
