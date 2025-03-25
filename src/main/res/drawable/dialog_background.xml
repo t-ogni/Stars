@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Затемнение фона -->
+    <item android:drawable="@android:color/black" android:alpha="128"/>
+
+    <!-- Закругленный белый фон для диалога -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="32dp"/>
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+</layer-list>

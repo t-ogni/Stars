@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- AppBar с Toolbar для заголовка и кнопки "Назад" -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:subtitleTextColor="#000000"
+            app:title="Настройки карты"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:titleTextColor="#000000" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Основное содержимое -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Настройка параметров карты -->
+            <EditText
+                android:id="@+id/etMinMag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Минимальная звёздная величина"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Широта"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etLon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Долгота"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Дата (YYYY-MM-DD)"
+                android:focusable="false" />
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выбрать дату" />
+
+            <!-- Переключатели для отображения элементов карты -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDrawConstellations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отрисовывать созвездия" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDrawLabels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отрисовывать подписи" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDrawGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отрисовывать сетку" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDrawHorizon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отрисовывать горизонт" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDrawStars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отрисовывать звёзды" />
+
+            <!-- Кнопка сохранения настроек -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
